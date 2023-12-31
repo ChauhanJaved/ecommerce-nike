@@ -1,7 +1,3 @@
-import bigShoe1 from './big-shoe1.png'
-import bigShoe2 from './big-shoe2.png'
-import bigShoe3 from './big-shoe3.png'
-
 import customer1 from './customer1.jpeg'
 import customer2 from './customer2.svg'
 
@@ -21,10 +17,11 @@ import thumbnailShoe1 from './thumbnail-shoe1.svg'
 import thumbnailShoe2 from './thumbnail-shoe2.svg'
 import thumbnailShoe3 from './thumbnail-shoe3.svg'
 
-export {
-    bigShoe1,
-    bigShoe2,
-    bigShoe3,
+export const bigShoe1: string = require('./big-shoe1.png').default;
+export const bigShoe2: string = require('./big-shoe2.png').default;
+export const bigShoe3: string = require('./big-shoe3.png').default;
+
+export {       
 
     customer1,
     customer2,
