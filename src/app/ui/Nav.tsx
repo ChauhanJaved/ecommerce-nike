@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { headerLogo } from "../../../public/images";
 import { navLinks } from '../utils/constants';
+import { montserrat } from './fonts';
 
 const Nav = () => {
   return (
@@ -13,7 +14,7 @@ const Nav = () => {
         <ul className='flex-1 flex justify-center items-center gap-16 max-lg:hidden'>
           {navLinks.map((item) => (
             <li key={item.label}>
-              <Link href={item.href}>
+              <Link href={item.href} className={`${montserrat.className} text-lg text-slate-800`}>
                 {item.label}
               </Link>
             </li>
