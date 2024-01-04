@@ -11,15 +11,15 @@ import { useState } from "react";
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="flex justify-between items-center flex-wrap p-6 border-red-600 border-2">
+    <nav className={`border-2 ${montserrat.className} flex justify-between items-center flex-wrap p-6 text-lg`}>
       {/* Logo----- */}
-      <div className="flex items-center flex-shrink-0 mr-6 lg:mr-72">
+      <div className="border-2 flex items-center flex-shrink-0">
         <Link href="/">
           <Image src={headerLogo} alt="Logo" className="w-[129px] h-[29px]" />
         </Link>
       </div>
       {/* Hamburger ----- */}
-      <div className="block lg:hidden">
+      <div className="block lg:hidden border-2">
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="flex items-center px-3 py-2 rounded text-black-500 hower:text-black-400">
@@ -37,23 +37,24 @@ const Nav = () => {
           </svg>
         </button>
       </div>
-      {/* Menu Items----- */}
-      <div className={`${montserrat.className} w-full block flex-grow lg:flex lg:items-center lg:w-auto ${isOpen ? "block" : "hidden"}`} >
-        <ul className="lg:flex-grow">
+      {/* Menu Items-1----- */}
+      <div className={`border-2 w-full block  lg:flex lg:items-center lg:w-auto  ${isOpen ? "block" : "hidden"}`} >
+        <ul className="lg:flex lg:gap-16">
           {navLinks.map((item) => (
-            <li key={item.label} className='block mt-4 lg:inline-block lg:mt-0 mr-4'>
+            <li key={item.label} className='block mr-4 mt-4 lg:inline-block lg:mt-0'>
               <Link href={item.href} >
                 {item.label}
               </Link>
             </li>
           ))}
-        </ul>
-        <div>
+        </ul>        
+      </div>
+      {/* Menu Items-2----- */} 
+      <div className={`border-2 w-full block flex-grow lg:flex lg:items-center lg:w-auto lg:flex-grow-0 ${isOpen ? "block" : "hidden"}`}>
          <button className="inline-flex items-center mt-4 lg:mt-0 bg-[#ff6452] border-0 rounded py-2 px-4 text-white">
            Login
          </button>
-       </div>
-      </div>   
+       </div>  
     </nav>
   );
 };
