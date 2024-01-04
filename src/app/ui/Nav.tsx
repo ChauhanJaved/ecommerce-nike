@@ -12,11 +12,13 @@ const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <nav className="flex justify-between items-center flex-wrap p-6 border-red-600 border-2">
+      {/* Logo----- */}
       <div className="flex items-center flex-shrink-0 mr-6 lg:mr-72">
         <Link href="/">
           <Image src={headerLogo} alt="Logo" className="w-[129px] h-[29px]" />
         </Link>
       </div>
+      {/* Hamburger ----- */}
       <div className="block lg:hidden">
         <button
           onClick={() => setIsOpen(!isOpen)}
@@ -35,23 +37,23 @@ const Nav = () => {
           </svg>
         </button>
       </div>
-      {/* <ul className="flex-1 flex justify-center items-center gap-16 max-lg:hidden bg-blue-300">
-        {navLinks.map((item) => (
-          <li key={item.label}>
-            <Link href={item.href} className={`${montserrat.className} text-lg text-slate-800`}>
-              {item.label}
-            </Link>
-          </li>
-        ))}
-      </ul> */}
-      {/* <div className={`bg-red-300 flex gap-2 text-lg leading-normal font-medium ${montserrat.className} max-lg:hidden`}>
-        <Link href="/">Sign In</Link>
-        <span>/</span>
-        <Link href="/">Explore Now</Link>
-      </div>
-      <div className="hidden max-lg:block">
-        <Image src={hamburger} alt="Hamburger Menu" width={25} height={25} />
-      </div> */}
+      {/* Menu Items----- */}
+      <div className={`${montserrat.className} w-full block flex-grow lg:flex lg:items-center lg:w-auto ${isOpen ? "block" : "hidden"}`} >
+        <ul className="lg:flex-grow">
+          {navLinks.map((item) => (
+            <li key={item.label} className='block mt-4 lg:inline-block lg:mt-0 mr-4'>
+              <Link href={item.href} >
+                {item.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+        <div>
+         <button className="inline-flex items-center mt-4 lg:mt-0 bg-[#ff6452] border-0 rounded py-2 px-4 text-white">
+           Login
+         </button>
+       </div>
+      </div>   
     </nav>
   );
 };
