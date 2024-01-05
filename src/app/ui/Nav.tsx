@@ -20,10 +20,10 @@ const Nav = () => {
         </Link>
       </div>
       {/* Hamburger ----- */}
-      <div className="block rounded lg:hidden border-2">
+      <div className="block lg:hidden">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="flex items-center px-3 py-2 rounded text-black-500 hower:text-black-400">
+          className="flex items-center px-3 py-2 border-2 rounded ">
           <svg
             className={`fill-current h-5 w-5 ${isOpen ? "hidden" : "block"}`}
             viewBox="0 0 20 20"
@@ -39,7 +39,7 @@ const Nav = () => {
         </button>
       </div>
       {/* Menu Items-1----- */}
-      <div className={` w-full block  lg:flex lg:items-center lg:w-auto  ${isOpen ? "block" : "hidden"}`}>
+      <div className={`w-full block  lg:flex lg:items-center lg:w-auto  ${isOpen ? "block" : "hidden"}`}>
         <ul className="lg:flex lg:gap-16">
           {navLinks.map((item) => (
             <li key={item.label} className="block text-right mr-4 mt-4 lg:inline-block lg:mt-0">
