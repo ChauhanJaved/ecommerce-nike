@@ -21,9 +21,7 @@ const Nav = () => {
       </div>
       {/* Hamburger ----- */}
       <div className="block lg:hidden">
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="flex items-center px-3 py-2 border-2 rounded ">
+        <button onClick={() => setIsOpen(!isOpen)} className="flex items-center px-3 py-2 border-2 rounded hover:text-orange-nike hover:border-orange-nike ">
           <svg
             className={`fill-current h-5 w-5 ${isOpen ? "hidden" : "block"}`}
             viewBox="0 0 20 20"
@@ -42,7 +40,7 @@ const Nav = () => {
       <div className={`w-full block  lg:flex lg:items-center lg:w-auto  ${isOpen ? "block" : "hidden"}`}>
         <ul className="lg:flex lg:gap-16">
           {navLinks.map((item) => (
-            <li key={item.label} className="block text-right mr-4 mt-4 lg:inline-block lg:mt-0">
+            <li key={item.label} className="block text-right mr-4 mt-4 lg:inline-block lg:mt-0 hover:text-orange-nike">
               <Link href={item.href}>{item.label}</Link>
             </li>
           ))}
@@ -53,7 +51,7 @@ const Nav = () => {
         className={`w-full block flex-grow text-right pr-4 lg:flex lg:items-center lg:w-auto lg:flex-grow-0 ${
           isOpen ? "block" : "hidden"
         }`}>
-        <button className="inline-flex items-center mt-4 lg:mt-0 bg-[#ff6452] border-0 rounded py-2 px-4 text-white">
+        <button className="inline-flex items-center mt-4 lg:mt-0 bg-orange-nike border-0 rounded py-2 px-4 text-white hover:bg-orange-600 ">
           Login
         </button>
       </div>

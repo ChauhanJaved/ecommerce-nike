@@ -12,6 +12,10 @@
   scroll-behavior: smooth;
 }
 
+:root {
+  --orange-color: #ff6452;    
+}
+
 @layer components {
   .max-container {
     max-width: 1440px;
@@ -24,6 +28,20 @@
 }
 
 @layer utilities {
+  .bg-orange-nike {
+    background-color: var(--orange-color);
+  }
+
+  .text-orange-nike {
+    color:var(--orange-color)
+  }
+
+  .border-orange-nike {
+    border-color: var(--orange-color);
+  }
+
+  .text-orange-nike
+
   .padding {
     @apply sm:px-16 px-8 sm:py-24 py-12;
   }
