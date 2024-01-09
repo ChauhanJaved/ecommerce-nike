@@ -12,7 +12,7 @@ const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <nav
-      className={`bg-black text-white absolute w-full z-10  ${montserrat.className} flex justify-between items-center flex-wrap p-6 text-lg`}>
+      className={`bg-white absolute w-full z-10  ${montserrat.className} flex justify-between items-center flex-wrap p-6 text-lg`}>
       {/* Logo----- */}
       <div className="flex items-center flex-shrink-0">
         <Link href="/">

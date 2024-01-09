@@ -1,18 +1,23 @@
 import { montserrat } from '../ui/fonts';
+import { palanquin } from '../ui/fonts';
 
 const Hero = () => {      
     return(
-    <section id='home' className='w-full min-h-screen bg-red-300'>
-        <div className='relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x pt-28 bg-yellow-100'>
-            <p>Our Summer Collections</p>
-            <h1>
-                <span>The New Arrival</span>
-                <br />
-                <span>Nike</span>
-                Shoes            
-            </h1>
-            <p>Discover stylish Nike arrivals, quality comfort, and innovation for your active life  sfsf sdf sdfs fs f sdf sdf sf.</p>            
+    <section id='home' className='bg-white dark:bg-gray-900'>
+        <div className='flex py-28 px-4 mx-auto max-w-screen-xl text-center lg:px-8 lg:py-56 md:flex-col'>
+            <div className={`${montserrat.className} `}>
+               <p className='text-coral-red text-xl'>Our Summer collections</p>
+               <h1 className={`${palanquin.className}  mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl  dark:text-white`}>
+                    The New Arrival <span className='text-coral-red'>Nike</span> Shoes
+               </h1>
+               <p className={`${montserrat.className} mb-8 text-lg lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400`}>Discover stylish Nike arrivals, quality comfort, and innovation for your active life.</p>
+               {/* <Button /> */}
+               <div className='xl:text-9xl'>
+               </div>
+            </div>
+            <div className='bg-blue-400'>
 
+            </div>
         </div>
     </section>    
     )  
